@@ -1,5 +1,4 @@
 import math
-from math import pi
 
 rad = float(input("Enter radius:"))
 
