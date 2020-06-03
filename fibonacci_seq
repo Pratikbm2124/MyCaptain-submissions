@@ -1,5 +1,5 @@
 # Fibonacci sequence
-n = int(input('Enter the length of fibonacci series that u want:'))
+n = int(input('Enter the length of fibonacci series that u want(>0):'))
 Fn = [0,1]
 
 for i in range(n):
