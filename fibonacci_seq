@@ -1,0 +1,11 @@
+# Fibonacci sequence
+n = int(input('Enter the length of fibonacci series that u want(>2):'))
+Fn = [0,1]
+
+for i in range(n):
+    j = Fn[i]+Fn[i+1]
+    Fn.append(j)
+    if len(Fn) == n:
+        break
+
+print(Fn)

@@ -1,0 +1,17 @@
+# Printing positive numbers
+
+list1 = [12,-7,5,64,-14]
+outl1 = []
+print('Output of list1')
+for i in list1:
+    if i > 0:
+        outl1.append(i)
+print(outl1)
+
+list2 = [12,14,-95,3]
+outl2 = []
+print('Output of list2')
+for j in list2:
+    if j > 0:
+        outl2.append(j)
+print(outl2)
