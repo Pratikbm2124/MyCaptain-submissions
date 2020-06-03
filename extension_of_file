@@ -1,4 +1,5 @@
 filename = input('Enter the Filename:')
+#creating a list by splitting the filename 
 fname , fextension = filename.split('.')
 
 if fextension == 'py':
