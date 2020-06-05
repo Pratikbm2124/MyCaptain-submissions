@@ -1,0 +1,39 @@
+#Python first project : School Administration Tool
+import csv
+
+def write_into_csv(info_list):
+    with open('student_info.csv', 'a', newline='') as csv_file: # 'w+' overwrites the data and 'a' appends the data to the csv_file
+        writer = csv.writer(csv_file)
+
+        if csv_file.tell() == 0:
+            writer.writerow(['Name','Age','Contact','Email_id'])
+        writer.writerow(info_list)
+if __name__ == '__main__':
+    condition = True
+    student_num = 1
+
+    while condition:
+        student_info = input(f'Enter student information for student #{student_num} in the following format(Name Age Contact Email_id):')
+        #print('Entered information:' + student_info)
+
+        #split the info to store it
+        student_info_list = student_info.split(' ')
+
+        #print("info after split up:" + str(student_info_list))
+
+        print(f'Entered information is \nName: {student_info_list[0]}\nAge: {student_info_list[1]}\n' +
+        f'Contact: {student_info_list[2]}\nEmail_id: {student_info_list[3]}')
+
+        info_check = input('Enter (yes/no) if the information is correct:')
+
+        if info_check == 'yes':
+            write_into_csv(student_info_list)
+            condition_check = input('Enter yes/no if you want to enter information for another student:')
+
+            if condition_check == 'yes':
+                condition = True
+                student_num += 1
+            elif condition_check == 'no':
+                condition = False
+        elif info_check == 'no':
+            print('Please  enter the information again')
