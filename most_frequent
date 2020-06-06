@@ -30,4 +30,4 @@ def most_frequent(string):
 
 
 most_frequent('Mississippi')
- # here the letter 's' is lost ):
+ # here the letter 's' is lost in both the methods i tried ):
