@@ -1,0 +1,28 @@
+# Take a string and print the letters in decreasing order of frequency.
+def most_frequent(string):
+
+    #create empty dictionary and a list
+    dict = {}
+    list = []
+    for let in string:
+        lcount = string.count(let)
+        dict[let] = str(lcount)  #append the letter and its frequency to the dictionary
+
+
+
+    #for i in sorted(strdict.keys(),reverse = True): #while using function 'sorted' (here) we loose n-1 letters that have the same frequency
+        #print(strdict[i] + '=' + i )
+
+    for i,j in dict.items():
+        list.append(str(j)+'='+i)
+
+    list.sort(reverse = True)
+
+    for i in list:
+        i = i[-1::-1]  # reversal of the string
+        print(i)
+
+
+
+most_frequent('Mississippi')
+ # here the letter 's' is lost in both the methods i tried ):
